@@ -38,34 +38,165 @@ REFRESH_TOKEN_SECRET=2631c5419dac4c6c205c079a01b0b5985f788e1492275ab8321cbb5468f
   ``` 
  - A aplicação deve estar em execução em http://localhost:1234.  
 
-## Uso
+## Express JWT
 
-- Registrar um novo usuário:
-  - `POST /register`
-  - Corpo da requisição:
+### Grupo Admin
+
+#### Obter Usuários
+
+- URL: `http://localhost:1234/admin/users`
+- Método: GET
+- Descrição: Obter usuários
+- Autenticação: Token de Portador (Bearer Token)
+
+#### Definir como Administrador
+
+- URL: `http://localhost:1234/admin/setAdmin`
+- Método: POST
+- Descrição: Definir usuário como administrador
+- Corpo:
+  - MIME Type: application/json
+  - Texto:
     ```json
     {
-      "user": "seu-nome-de-usuario",
-      "pwd": "sua-senha"
+      "targetUsername": "dave1"
     }
     ```
+- Cabeçalhos:
+  - Content-Type: application/json
+- Autenticação: Token de Portador (Bearer Token)
 
-- Fazer login com um usuário existente:
-  - `POST /login`
-  - Corpo da requisição:
+#### Definir como Editor
+
+- URL: `http://localhost:1234/admin/setEditor`
+- Método: POST
+- Descrição: Definir usuário como editor
+- Corpo:
+  - MIME Type: application/json
+  - Texto:
     ```json
     {
-      "user": "seu-nome-de-usuario",
-      "pwd": "sua-senha"
+      "targetUsername": "dave1"
     }
     ```
-  - A resposta incluirá um token JWT.
+- Cabeçalhos:
+  - Content-Type: application/json
+- Autenticação: Token de Portador (Bearer Token)
 
-- Acessar rotas protegidas:
-  - Inclua o token JWT no cabeçalho `Authorization` das requisições subsequentes:
+### Grupo Employees
+
+#### Obter Funcionários
+
+- URL: `http://localhost:1234/employees`
+- Método: GET
+- Descrição: Obter funcionários
+- Autenticação: Token de Portador (Bearer Token)
+
+#### Criar Funcionário
+
+- URL: `http://localhost:1234/employees`
+- Método: POST
+- Descrição: Criar um novo funcionário
+- Corpo:
+  - MIME Type: application/json
+  - Texto:
+    ```json
+    {
+      "firstname": "João",
+      "lastname": "silva"
+    }
     ```
-    Authorization: Bearer seu-token-jwt
+- Cabeçalhos:
+  - Content-Type: application/json
+- Autenticação: Token de Portador (Bearer Token)
+
+#### Excluir Funcionário
+
+- URL: `http://localhost:1234/employees`
+- Método: DELETE
+- Descrição: Excluir um funcionário
+- Corpo:
+  - MIME Type: application/json
+  - Texto:
+    ```json
+    {
+      "id": 1
+    }
     ```
+- Cabeçalhos:
+  - Content-Type: application/json
+- Autenticação: Token de Portador (Bearer Token)
+
+#### Atualizar Funcionário
+
+- URL: `http://localhost:1234/employees`
+- Método: PUT
+- Descrição: Atualizar um funcionário
+- Corpo:
+  - MIME Type: application/json
+  - Texto:
+    ```json
+    {
+      "id": 0,
+      "firstname": "João",
+      "lastname": "silva"
+    }
+    ```
+- Cabeçalhos:
+  - Content-Type: application/json
+- Autenticação: Token de Portador (Bearer Token)
+
+### Autenticação
+
+#### Registrar
+
+- URL: `http://localhost:1234/register`
+- Método: POST
+- Descrição: Registrar um novo usuário
+- Corpo:
+  - MIME Type: application/json
+  - Texto:
+    ```json
+    {
+      "user": "João",
+      "pwd": "asdasd"
+    }
+    ```
+- Cabeçalhos:
+  - Content-Type: application/json
+
+#### Login
+
+- URL: `http://localhost:1234/auth`
+- Método: POST
+- Descrição: Login do usuário
+- Corpo:
+  - MIME Type: application/json
+  - Texto:
+    ```json
+    {
+      "user": "João",
+      "pwd": "asdasd"
+    }
+    ```
+- Cabeçalhos:
+  - Content-Type: application/json
+- Autenticação: Token de Portador (Bearer Token)
+
+#### Atualizar Token
+
+- URL: `http://localhost:3500/refresh`
+- Método: POST
+- Descrição: Atualizar o token de acesso
+
+#### Logout
+
+- URL: `http://localhost:1234/logout`
+- Método: GET
+- Descrição: Logout do usuário
+
+Observação: Os tokens de autenticação foram ocultados por motivos de segurança.
+
 
 
 ## Estrutura do Projeto
@@ -79,3 +210,10 @@ A estrutura do projeto segue o padrão MVC (Model-View-Controller):
 - `models/`: Modelos .json que representam as estruturas de dados.
 - `routes/`: Definições das rotas.
 - `utils/`: Funções de utilidade.
+
+
+## Insomnia Collection
+
+[![Download File](https://insomnia.rest/images/run.svg)](https://github.com/AndreLuizMMS/express-jwt-auth/blob/50dac9a88e4b33951fa1bc75cc0623c6405214bf/InsomniaCollection.json)
+
+
