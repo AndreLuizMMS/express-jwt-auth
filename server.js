@@ -14,6 +14,7 @@ const AuthRouter = require('./routes/auth');
 const EmployeesRouter = require('./routes/api/employees');
 const RefreshTokenRouter = require('./routes/refresh');
 const LogoutRouter = require('./routes/logout');
+const AdminRouter = require('./routes/admin');
 
 const PORT = process.env.PORT || 1234;
 const app = express();
@@ -30,7 +31,10 @@ app.use('/register', RegisterRouter);
 app.use('/auth', AuthRouter);
 app.use('/logout', LogoutRouter);
 app.use('/refresh', RefreshTokenRouter);
-app.use('/employees', verifyJWT, EmployeesRouter);
+
+app.use(verifyJWT);
+app.use('/admin', AdminRouter);
+app.use('/employees', EmployeesRouter);
 
 app.all('*', (req, res) => {
   res.sendStatus(404);

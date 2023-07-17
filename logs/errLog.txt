@@ -22,3 +22,37 @@
 20230716	16:59:27	51691154-aca1-44c5-a05a-b79e1eda6189	Error: Cannot set headers after they are sent to the client
 20230716	16:59:42	fc1a76a9-8a70-4129-b0f5-269fc768eb28	Error: Can't set headers after they are sent.
 20230716	17:06:26	e10d6972-9149-4061-9041-987796c6a6e7	TypeError: Cannot read properties of undefined (reading 'split')
+20230717	15:08:32	12683897-8369-4e28-bbb7-88d2688f3535	TypeError: Cannot read properties of undefined (reading 'username')
+20230717	15:08:59	97b7baac-e91b-472c-a312-38a5d8be8e8d	TypeError: Cannot read properties of undefined (reading 'username')
+20230717	15:09:24	9027f8c8-4282-448d-b996-f273820e6c26	TypeError: Cannot read properties of undefined (reading 'username')
+20230717	15:09:33	6703e37f-3621-4646-bf65-da242971e7a3	Error: Cannot set headers after they are sent to the client
+20230717	15:11:15	e2dc2096-90dd-4561-81f3-d2881b7055f7	Error: Cannot set headers after they are sent to the client
+20230717	15:14:56	93a10ff1-a18d-4206-8c43-778025222d83	Error: Cannot set headers after they are sent to the client
+20230717	15:15:04	9d7aa51c-2560-43dc-9768-2ec47a11843e	Error: Cannot set headers after they are sent to the client
+20230717	15:16:28	6376baec-b3fc-45a5-acc8-c56ab4d0028f	Error: Cannot set headers after they are sent to the client
+20230717	15:17:13	5bcdfe00-38c9-4fae-aeb3-969954f4306c	Error: Cannot set headers after they are sent to the client
+20230717	15:17:57	affeacfc-79da-43ba-81d3-c009543cb23a	Error: Cannot set headers after they are sent to the client
+20230717	15:18:47	f9834af3-7239-48b6-9b3e-0174e4876595	Error: Cannot set headers after they are sent to the client
+20230717	15:20:52	0b64277b-a5c7-458d-ae9c-3f8b9834c2ff	Error: Cannot set headers after they are sent to the client
+20230717	15:21:39	7f31c352-8c4c-4d83-b777-34d2b30b904f	Error: Cannot set headers after they are sent to the client
+20230717	15:23:34	13001b26-6131-4f2d-a4ca-f67c8145106c	Error: Cannot set headers after they are sent to the client
+20230717	15:24:05	b6246e29-f975-48c5-83a2-5df1416ed042	Error: Cannot set headers after they are sent to the client
+20230717	15:24:17	a12c1d2a-7cbf-41c5-8115-d164d9adeb92	Error: Cannot set headers after they are sent to the client
+20230717	15:25:22	40594217-b168-4fa0-9d35-b6c237765e30	Error: Cannot set headers after they are sent to the client
+20230717	15:28:46	80cf4a2d-85f2-4e29-b9a0-cfe75b689e21	Error: Cannot set headers after they are sent to the client
+20230717	15:32:34	12c7205d-4bc0-48dd-8d5f-53f7be5e0915	Error: Cannot set headers after they are sent to the client
+20230717	15:58:24	eea66b18-0306-43f5-9b3b-863760af8999	ReferenceError: userData is not defined
+20230717	16:00:19	e6929ad2-33f1-49f9-b930-13e9e57715bc	Error: Cannot set headers after they are sent to the client
+20230717	16:00:20	340bf701-96d8-47a2-bdab-3be040b6a19a	Error: Cannot set headers after they are sent to the client
+20230717	16:00:47	9b3a0b4b-5d9a-44b5-b841-9574f98687ca	Error: Cannot set headers after they are sent to the client
+20230717	16:01:04	07b6863b-41a7-4c69-ba1b-aa057f24c444	Error: Cannot set headers after they are sent to the client
+20230717	16:22:51	10461ec0-5541-4bd6-84c7-220a938c7779	TypeError: Assignment to constant variable.
+20230717	16:27:20	3b8e24a9-e8c4-4c1b-b6b3-6d373ea7d6c0	TypeError: Cannot read properties of undefined (reading 'roles')
+20230717	16:27:50	53146ced-3e8b-40c9-88e2-2f5ab84f7897	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle
+20230717	16:27:59	554b5d8e-732b-47dc-ac7a-51275ea73dc1	TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Socket'
+    |     property 'parser' -> object with constructor 'HTTPParser'
+    --- property 'socket' closes the circle
