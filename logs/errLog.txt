@@ -56,3 +56,6 @@
     --> starting at object with constructor 'Socket'
     |     property 'parser' -> object with constructor 'HTTPParser'
     --- property 'socket' closes the circle
+20231107	13:48:41	c7e7e856-45c0-4c67-bf13-5d9b907bb181	Error: Not allowed by CORS
+20231108	13:30:09	53a8502b-dac5-4ca9-a9ed-5a3feb6cab5e	Error: Not allowed by CORS
+20231108	13:30:58	761e9273-fb26-45ca-b75e-5257e20149ed	Error: Not allowed by CORS

@@ -167,7 +167,7 @@ REFRESH_TOKEN_SECRET=2631c5419dac4c6c205c079a01b0b5985f788e1492275ab8321cbb5468f
 
 #### Login
 
-- URL: `http://localhost:1234/auth`
+- URL: `c`
 - Método: POST
 - Descrição: Login do usuário
 - Corpo:

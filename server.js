@@ -1,20 +1,20 @@
-const cookieParser = require('cookie-parser');
-const express = require('express');
 const path = require('path');
 const cors = require('cors');
+const express = require('express');
+const cookieParser = require('cookie-parser');
 
-const { logger } = require('./middleware/logEvents');
 const corsOptions = require('./config/corsOptions');
-const errorHandler = require('./middleware/errorHandler');
 const verifyJWT = require('./middleware/verifyJWT');
+const { logger } = require('./middleware/logEvents');
+const errorHandler = require('./middleware/errorHandler');
 
 const RootRouter = require('./routes/root');
-const RegisterRouter = require('./routes/register');
 const AuthRouter = require('./routes/auth');
-const EmployeesRouter = require('./routes/api/employees');
-const RefreshTokenRouter = require('./routes/refresh');
-const LogoutRouter = require('./routes/logout');
 const AdminRouter = require('./routes/admin');
+const LogoutRouter = require('./routes/logout');
+const RegisterRouter = require('./routes/register');
+const RefreshTokenRouter = require('./routes/refresh');
+const EmployeesRouter = require('./routes/api/employees');
 
 const PORT = process.env.PORT || 1234;
 const app = express();
@@ -27,9 +27,9 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/', express.static(path.join(__dirname, '/public')));
 app.use('/', RootRouter);
-app.use('/register', RegisterRouter);
 app.use('/auth', AuthRouter);
 app.use('/logout', LogoutRouter);
+app.use('/register', RegisterRouter);
 app.use('/refresh', RefreshTokenRouter);
 
 app.use(verifyJWT);
